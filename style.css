@@ -1,0 +1,30 @@
+* {
+    font-family: "Nunito", sans-serif;
+    ;
+}
+
+.cust-button {
+    transform: scale(1);
+
+    transition: 0.2s ease-in-out;
+}
+
+.cust-button:hover {
+    transform: scale(0.9);
+
+}
+
+.help {
+    transform: scale(1);
+
+    transition: 0.2s ease-in-out;
+}
+
+.help:hover {
+    transform: scale(0.95);
+
+}
+
+button {
+    cursor: pointer !important;
+}

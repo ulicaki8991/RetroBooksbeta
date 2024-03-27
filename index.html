@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book picker</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.8.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Popup -->
+    <div id="fader"
+        class="transition-colors duration-500 ease-in-out fixed w-screen h-[100%] bg-[#00000000] z-10 flex justify-center items-center backdrop-blur-sm hidden ">
+
+        <div id="panel"
+            class="bg-[#F7F8FC] border-solid border-2 border-[#E2E8F0] rounded-[20px] w-full md:w-2/4 h-auto p-3 ">
+            <div class="flex flex-row justify-between items-center">
+                <p class="font-bold text-[30px]">Why 4 months?</p>
+                <button id="close" class="btn btn-square">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <p class="pt-2 pb-2 text-lg">In four months, you can:</p>
+            <p class="text-lg">j🎭 <b>Fully Feel and Understand:</b> Allow ample time to immerse and grasp the essence
+                of each genre.
+            </p>
+            <p class="text-lg">📚 <b>Build Habit:</b> Establish a consistent reading routine without overwhelming
+                commitments.</p>
+            <p class="text-lg">⏳<b> Avoid Lengthy Periods:</b> Strike a balance between depth and time commitment.</p>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- Header -->
+    <div class="flex flex-row justify-center relative top-2">
+        <div
+            class="container bg-[#F7F8FC] w-screen sm:w-2/4 h-auto p-2 border-solid border-2 border-[#E2E8F0] rounded-[20px] grid grid-cols-3 ">
+            <button class="cursor-pointer"><a href="https://twitter.com/MOulitzky"><img
+                        class="cust-button rounded-[11px] w-[43px]" src="img/x.png"></a></button>
+            <button class="flex flex-row justify-center"><img class="w-[120px]" src="img/Logo.svg"></button>
+
+        </div>
+    </div>
+
+
+
+
+    <div id="content">
+        <div class="flex flex-col">
+            <div id="picker" class="flex flex-col items-center">
+                <h1 class="mt-8 text-center font-black text-[25px] sm:text-[30px] md:text-[40px]">Find new RETRO books
+                    for next 4 months
+                </h1>
+                <h2 class="font-bold text-[20px]">and find where to buy them</h2>
+
+                <div class="flex mt-12 flex-wrap content-center justify-center w-screen sm:w-3/4 md:w-2/4">
+                    <button alt="business" class="text-base btn cat btn-outline btn-primary m-3">📊 Business</button>
+                    <button alt="film" class="text-base  btn cat btn-outline btn-primary m-3">🎥 Film</button>
+                    <button alt="science_fiction" class="text-base btn cat btn-outline btn-primary m-3">🌌 Science
+                        Fiction</button>
+                    <button alt="romance" class="text-base btn cat btn-outline btn-primary m-3">💘 Romance</button>
+                    <button alt="mystery_and_detective" class="text-base btn cat btn-outline btn-primary m-3">🕵️‍♂️
+                        Mystery and
+                        Detective</button>
+                    <button alt="fairy_tales" class="text-base btn cat btn-outline btn-primary m-3">🧚‍♀️ Fairy
+                        Tales</button>
+                    <button alt="classic_literature" class="text-base btn cat btn-outline btn-primary m-3">📖 Classic
+                        Literature</button>
+                    <button alt="cooking" class="text-base btn cat btn-outline btn-primary m-3">🍳 Cooking</button>
+                    <button alt="travel" class="text-base btn cat btn-outline btn-primary m-3">🏞 Travel</button>
+                    <button alt="drama" class="text-base btn cat btn-outline btn-primary m-3">🎭 Drama</button>
+                    <button alt="dragons" class="text-base btn cat btn-outline btn-primary m-3">🐉 Dragons</button>
+                    <button alt="adventure" class="text-base btn cat btn-outline btn-primary m-3">🧳 Adventure</button>
+                    <button alt="aliens" class="text-base btn cat btn-outline btn-primary m-3">👽 Aliens</button>
+                    <button alt="nature" class="text-base btn cat btn-outline btn-primary m-3">🌳 Nature</button>
+                    <button alt="education" class="text-base btn cat btn-outline btn-primary m-3">🎓 Education</button>
+                    <button alt="graphic_novels" class="text-base btn cat btn-outline btn-primary m-3">🎨 Graphic
+                        Novels</button>
+                    <button alt="historical_fiction" class="text-base btn cat btn-outline btn-primary m-3">🏰 Historical
+                        Fiction</button>
+                    <button alt="self-help" class="text-base btn cat btn-outline btn-primary m-3">🧘‍♀️
+                        Self-Help</button>
+                    <button alt="economics" class="text-base btn cat btn-outline btn-primary m-3">💸 Economics</button>
+                    <button alt="science" class="text-base btn cat btn-outline btn-primary m-3">🔬 Science</button>
+                    <button alt="music" class="text-base btn cat btn-outline btn-primary m-3">🎶 Music</button>
+                    <button alt="sports" class="text-base btn cat btn-outline btn-primary m-3">🏈 Sports</button>
+
+                    <button alt="geography" class="text-base btn cat btn-outline btn-primary m-3">🗺 Geography</button>
+                    <button alt="pets" class="text-base btn cat btn-outline btn-primary m-3">🐶 Pets</button>
+
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Information -->
+    <div id="info" class="fixed bottom-4 left-4">
+        <div
+            class="help cursor-pointer container bg-[#F7F8FC] hidden sm:flex flex-row gap-3 items-center h-auto pt-2 pb-2 pl-3 pr-3 border-solid border-2 border-[#E2E8F0] rounded-[20px]">
+            <kbd class="kbd">i</kbd>
+            <p>for information</p>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Popup -->
+
+
+    <script src="homePage.js"></script>
+    <script src="Popup.js"></script>
+</body>
+
+
+</html>
